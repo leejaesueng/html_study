@@ -12,33 +12,93 @@
 
         div.container {
             font-size: 20px;
-            text-align: center;
-            width: 1000px;
-            height: 500px;
+            width: 800px;
             margin: 20px auto 0;
             background: gray;
             border: 2px double gray;
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
         h1 {
+            text-align: center;
             font-size: 40px;
             font-weight: bold;
             font-family: cursive;
-            padding: 20px;
+            padding: 20px 0;
             background: lightgray;
         }
         h2 {
-            font-size: 24px;
-            padding: 10px;
-            background: darkgray;
+            font-size: 20px;
+            padding: 10px 0;
+            background: #332f2f;
             color: white;
+            text-align: center;
+            border-bottom: 3px solid gray;
         }
         span.yellow {
             color: yellow;
+            font-size: 1.1em;
         }
-        li#tulip {
-            background: url('');
+        .container .gallery {
+            background: #6e6a6a;
+            padding: 20px 0;
         }
+        .container .gallery li {
+            border: 1px solid #ccc;
+            width: 23.75%;
+            float: left;
+            box-sizing: border-box;
+            height: 330px;
+            background: #fff;
+            margin-right: 1%;
+            padding: 5px;
+        }
+        .container .gallery li:first-child {
+            margin-left: 1%;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .container .gallery li .img-box {
+            height: 150px;
+            border: 3px solid gray;
+        }
+        .container .gallery li p {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #424242;
+            text-align: justify;
+            margin-top: 20px;
+            padding: 0  10px;
+        }
+        #tulip {
+            background: #d31515;
+        }
+        #tulip .img-box {
+            background: url('../../img/tulip.jpg') no-repeat center / cover;
+        }
+        #jebi {
+            background: #e941f9;
+        }
+        #jebi .img-box{
+            background: url('../../img/jebi.jpg') no-repeat center / cover;
+        }
+        #hobak {
+            background: #fe692b;
+        }
+        #hobak .img-box {
+            background: url('../../img/hobak.jpg') no-repeat center / cover;
+        }
+        #sunflower {
+            background: #f3ea33;
+        }
+        #sunflower .img-box {
+            background: url('../../img/sunflower.jpg') no-repeat center / cover;
+        }
+        
+
     </style>
 
 </head>
@@ -50,7 +110,7 @@
 
         <h2 class="intro">사람들은 아마 자신에게 <span class="yellow">자신감을 북돋워 주는</span> 표정 있는 꽃들을 선호할 것이다.</h2>
 
-        <ul class="gallery">
+        <ul class="gallery clearfix">
             <li id="tulip">
                 <div class="img-box"></div>
                 <p>
